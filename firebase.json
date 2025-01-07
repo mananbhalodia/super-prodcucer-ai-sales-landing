@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "super-producr-ai-landing",
+    "site": "super-producer-ai-landing",
     "public": "dist/super-producr-sales-landing/browser",
     "ignore": [
       "firebase.json",
