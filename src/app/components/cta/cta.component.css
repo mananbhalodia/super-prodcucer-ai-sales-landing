@@ -1,0 +1,32 @@
+/* src/app/components/cta/cta.component.css */
+.cta {
+    font-family: 'Roboto', sans-serif;
+    padding: 60px 0;
+    background: #007BFF;
+    color: #fff;
+    text-align: center;
+}
+
+.cta h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.cta p {
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.cta .cta-button {
+    background: #fff;
+    color: #007BFF;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cta .cta-button:hover {
+    background: #e0e0e0;
+    color: #0056b3;
+}

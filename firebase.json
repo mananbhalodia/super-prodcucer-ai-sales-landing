@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "super-producr-ai-landing",
+    "public": "dist/super-producr-sales-landing/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

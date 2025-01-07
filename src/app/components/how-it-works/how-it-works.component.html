@@ -1,0 +1,13 @@
+<!-- src/app/components/how-it-works/how-it-works.component.html -->
+<section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step" *ngFor="let step of steps">
+          <i [class]="step.icon"></i>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>

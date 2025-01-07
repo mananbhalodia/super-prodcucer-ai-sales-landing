@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* src/app/app.component.css */
+
+/* Example: Global Styles */
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+  }
+  
+  /* Add any additional global styles here */

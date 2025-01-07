@@ -1,0 +1,110 @@
+<section class="hero" id="hero">
+  <div class="container">
+    
+    <!-- Hero Image -->
+    <div class="hero-image-container">
+      <img src="assets/hero-image.png" alt="Hero Image" class="hero-image" />
+    </div>
+
+    <!-- Title -->
+    <h1 class="hero-title">Connect with new businesses as soon as they form.</h1>
+
+    <!-- Subtitle -->
+    <p class="hero-subtitle">
+      Close before your competition even knows they exist.
+    </p>
+
+    <!-- CTA: Email Form -->
+    <form
+      class="hero-email-form"
+      (ngSubmit)="onSubmitEmail()"
+      #emailForm="ngForm"
+    >
+      <input
+        type="email"
+        placeholder="Enter your email"
+        [(ngModel)]="email"
+        name="email"
+        required
+        class="email-input"
+        #emailInput="ngModel"
+        aria-describedby="emailHelp"
+      />
+      <button
+        type="submit"
+        class="cta-button"
+        [disabled]="!emailForm.form.valid || isSubmitting"
+        [ngClass]="{ 'submitting': isSubmitting }"
+        [attr.aria-busy]="isSubmitting"
+        aria-live="polite"
+      >
+        {{ isSubmitting ? 'Submitting...' : 'Get Started' }}
+      </button>
+    </form>
+
+    <!-- Validation Error -->
+    <div
+      *ngIf="emailInput.invalid && emailInput.touched && !successMessage"
+      class="validation-error"
+      id="emailHelp"
+      role="alert"
+      aria-live="assertive"
+    >
+      Please enter a valid email address.
+    </div>
+
+    <!-- Success Message -->
+    <div
+      class="hero-success-message"
+      *ngIf="successMessage"
+      tabindex="-1"
+      #successMessageDiv
+      role="alert"
+      aria-live="assertive"
+    >
+      {{ successMessage }}
+    </div>
+
+    <!-- Error Message -->
+    <div
+      class="hero-error-message"
+      *ngIf="errorMessage"
+      tabindex="-1"
+      #errorMessageDiv
+      role="alert"
+      aria-live="assertive"
+    >
+      {{ errorMessage }}
+    </div>
+
+  </div> <!-- End .container -->
+
+  <!-- FULL-WIDTH Scrolling Images (outside .container) -->
+  <div class="scrolling-images-fullwidth">
+    <div class="scrolling-images">
+      <!-- First copy of leads -->
+      <app-smb-lead-card
+        *ngFor="let lead of leads"
+        [name]="lead.name"
+        [role]="lead.role"
+        [email]="lead.email"
+        [tag]="lead.tag"
+        [profileImage]="lead.profileImage"
+        [formedSince]="lead.formedSince"
+      >
+      </app-smb-lead-card>
+
+      <!-- Second copy of the same leads -->
+      <app-smb-lead-card
+        *ngFor="let lead of leads"
+        [name]="lead.name"
+        [role]="lead.role"
+        [email]="lead.email"
+        [tag]="lead.tag"
+        [profileImage]="lead.profileImage"
+        [formedSince]="lead.formedSince"
+      >
+      </app-smb-lead-card>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+<!-- src/app/components/faq/faq.component.html -->
+<section class="faq" id="faq">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item" *ngFor="let faq of faqs" [class.active]="faq.active">
+        <h3 (click)="toggleFaq(faq)">{{ faq.question }}</h3>
+        <p *ngIf="faq.active">{{ faq.answer }}</p>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,15 @@
+<div class="smb-lead-card">
+    <img [src]="profileImage" alt="{{ name }}" class="profile-image" />
+  
+    <div class="lead-details">
+      <!-- Chip and Name on one line, chip on the far left -->
+      <div class="name-tag-row">
+        <span class="lead-tag">{{ tag }}</span>
+        <h3 class="lead-name">{{ name }}</h3>
+      </div>
+  
+      <p class="lead-role">{{ role }}</p>
+      <a href="mailto:{{ email }}" class="lead-email">{{ email }}</a>
+      <p class="lead-formed">Formed business {{ formedSince }} ago</p>
+    </div>
+  </div>

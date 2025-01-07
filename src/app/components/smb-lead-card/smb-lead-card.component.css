@@ -1,0 +1,69 @@
+.smb-lead-card {
+    display: flex;
+    align-items: center;
+    background: #007BFF;
+    border-radius: 6px;
+    padding: 12px;
+    gap: 12px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .smb-lead-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* The text container */
+  .lead-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: #fff; /* White text for readability */
+  }
+  
+  /* Chip and name on the same line, chip on the left */
+  .name-tag-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+  }
+  
+  .lead-tag {
+    font-size: 11px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 10px;
+    white-space: nowrap;
+  }
+  
+  .lead-name {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .lead-role {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.9;
+  }
+  
+  .lead-email {
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .lead-formed {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.8;
+  }

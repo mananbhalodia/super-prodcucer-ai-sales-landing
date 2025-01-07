@@ -1,0 +1,26 @@
+<!-- header.component.html -->
+<header [class.scrolled]="isScrolled">
+  <div class="container nav-container">
+    <!-- Logo -->
+    <div class="logo-container">
+      <div class="logo">
+        <span class="live-badge"></span>
+        <span class="logo-text">Super Producer</span>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      <ul [class.active]="menuActive" id="nav-menu">
+        <li>
+          <a href="#talk-to-sales">Talk to sales</a>
+        </li>
+      </ul>
+
+      <!-- Hamburgermenu with fallback icon ☰ -->
+      <div class="hamburger" (click)="toggleMenu()" aria-label="Toggle navigation menu">
+        <span class="hamburger-icon">☰</span>
+      </div>
+    </nav>
+  </div>
+</header>

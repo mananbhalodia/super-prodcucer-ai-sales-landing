@@ -1,0 +1,61 @@
+/* src/app/components/modal/modal.component.css */
+.modal {
+    font-family: 'Roboto', sans-serif;
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    transition: display 0.3s ease;
+}
+
+.modal.show {
+    display: block;
+}
+
+.modal-content {
+    background: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    text-align: center;
+}
+
+.modal-content h2 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.modal-content p {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.modal-content .modal-buttons a {
+    margin: 0 10px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5em;
+    color: #333;
+    cursor: pointer;
+}
+
+.cta-button {
+    background: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background 0.3s ease;
+}
